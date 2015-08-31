@@ -46,6 +46,8 @@ function nestedpages_check_versions( $wp = '3.9', $php = '5.3.2' ) {
     wp_die('<p>The <strong>Nested Pages</strong> plugin requires'.$flag.'  version '.$version.' or greater.</p>','Plugin Activation Error',  array( 'response'=>200, 'back_link'=>TRUE ) );
 }
 
+define('NESTEDPAGES_DIR', __FILE__);
+
 if( !class_exists('Bootstrap') ) :
     nestedpages_check_versions();
     require_once('vendor/autoload.php');

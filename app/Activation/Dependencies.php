@@ -30,7 +30,7 @@ class Dependencies
 		$this->setPluginVersion();
 		add_action( 'admin_enqueue_scripts', array($this, 'styles') );
 		add_action( 'admin_enqueue_scripts', array($this, 'scripts') );
-		$this->plugin_dir = plugins_url() . '/wp-nested-pages';
+		$this->plugin_dir = plugins_url('/', NESTEDPAGES_DIR);
 	}
 
 	/**
